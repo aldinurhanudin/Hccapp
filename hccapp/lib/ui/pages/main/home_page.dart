@@ -10,12 +10,11 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-
     return BlocBuilder<CurrentCubit, CurrentState>(
       builder: (_, current) {
         return Scaffold(
           bottomNavigationBar:
-          buildBottomNavigationBar(current.currentNavBarMainCustomer),
+              buildBottomNavigationBar(current.currentNavBarMainCustomer),
           body: tabs(current.currentNavBarMainCustomer),
         );
       },
@@ -36,8 +35,8 @@ class _MainPageState extends State<MainPage> {
       const Center(
         child: Text('Notification Page'),
       ),
-      const Center(
-        child: Text('Profile Page'),
+      Center(
+        child: ProfilePage(),
       )
     ];
     return tabs[current];
