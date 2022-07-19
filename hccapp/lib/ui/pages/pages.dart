@@ -11,5 +11,5 @@ part 'wrapper.dart';
 
 part 'auth/login_page.dart';
 
-part 'main/home_page.dart';
+part 'main/main_page.dart';
 part 'profile_page.dart';
