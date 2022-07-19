@@ -23,8 +23,8 @@ class _MainPageState extends State<MainPage> {
 
   Widget tabs(int current) {
     final tabs = [
-      const Center(
-        child: Text('Home Page'),
+      Center(
+        child: HomePage(),
       ),
       const Center(
         child: Text('Notification Page'),

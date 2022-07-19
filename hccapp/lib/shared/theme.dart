@@ -4,6 +4,7 @@ const double defaultMargin = 20;
 
 const Color mainColor = Color(0xFF3C4697);
 const Color whiteColor = Color(0xFFFFFFFF);
+const lightBackgroundColor = Color(0xffF6F8FB);
 const Color accentColor1 = Color(0xFFADADAD);
 const Color accentColor2 = Color(0xFFFBD460);
 const accentColor4 = Color(0xFFFFFFFF);
