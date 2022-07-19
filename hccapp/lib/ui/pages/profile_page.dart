@@ -77,7 +77,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         // isLoading = true;
                       });
 
-                      Get.to(() => MainPage());
+                      Get.to(() => EditProfilePage());
                       setState(() {
                         // isLoading = false;
                       });
