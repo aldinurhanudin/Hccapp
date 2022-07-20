@@ -1,12 +1,5 @@
 part of 'pages.dart';
 
-// import 'package:flutter/material.dart';
-// import 'package:get/get_core/src/get_main.dart';
-// import 'package:get/get_navigation/src/extension_navigation.dart';
-// import 'package:google_fonts/google_fonts.dart';
-// import 'package:hccapp/shared/shared.dart';
-// import 'package:hccapp/ui/pages/pages.dart';
-
 class EditProfilePage extends StatefulWidget {
   @override
   State<EditProfilePage> createState() => EditProfilePageState();
