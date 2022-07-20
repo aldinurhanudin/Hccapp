@@ -129,7 +129,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           width: 10,
                         ),
                         Text(
-                          "Dompetku",
+                          "Pin Saya",
                           style: blackTextFont.copyWith(fontSize: 16),
                         )
                       ],
@@ -155,7 +155,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         width: 10,
                       ),
                       Text(
-                        "Bahasa",
+                        "Rewards",
                         style: blackTextFont.copyWith(fontSize: 16),
                       )
                     ],
