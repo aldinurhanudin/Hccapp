@@ -1,8 +1,4 @@
-import 'dart:async';
-
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:hccapp/shared/shared.dart';
+part of 'pages.dart';
 
 class SplashPage extends StatefulWidget {
   @override
@@ -23,14 +19,16 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: mainColor,
+      backgroundColor: whiteColor,
       body: Center(
         child: Container(
           width: 130,
           height: 150,
           decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/image_splash.png'))),
+            image: DecorationImage(
+              image: AssetImage('assets/logo.png'),
+            ),
+          ),
         ),
       ),
     );

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
-import 'package:hccapp/ui/pages/splash_page.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import 'cubit/cubit.dart';
