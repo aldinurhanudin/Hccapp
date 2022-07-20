@@ -3,10 +3,13 @@ part of 'widgets.dart';
 class FiturItem extends StatelessWidget {
   final String title;
   final String imageUrl;
+  final bool isSelected;
+
   const FiturItem({
     Key? key,
     required this.title,
     required this.imageUrl,
+    this.isSelected = false,
   }) : super(key: key);
 
   @override
@@ -19,6 +22,10 @@ class FiturItem extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: whiteColor,
+        border: Border.all(
+          width: 2,
+          color: isSelected ? mainColor : whiteColor,
+        ),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -28,6 +35,7 @@ class FiturItem extends StatelessWidget {
             height: 100,
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text(
                 title,

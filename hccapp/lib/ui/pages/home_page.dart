@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:hccapp/shared/shared.dart';
-import 'package:hccapp/ui/widgets/widgets.dart';
+part of 'pages.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -33,6 +29,7 @@ class HomePage extends StatelessWidget {
           const FiturItem(
             title: 'Project saya',
             imageUrl: 'assets/project.png',
+            isSelected: true,
           ),
           const FiturItem(
             title: 'Slip Gaji',
