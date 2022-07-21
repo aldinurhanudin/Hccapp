@@ -27,14 +27,14 @@ class _MainPageState extends State<MainPage> {
         child: HomePage(),
       ),
       const Center(
-        child: Text('Notification Page'),
+        child: Text('Search Page'),
       ),
-      const Center(
-        child: Text('Notification Page'),
-      ),
-      const Center(
-        child: Text('Notification Page'),
-      ),
+      // const Center(
+      //   child: Text('Notification Page'),
+      // ),
+      // const Center(
+      //   child: Text('Notification Page'),
+      // ),
       Center(
         child: ProfilePage(),
       )
@@ -63,26 +63,26 @@ class _MainPageState extends State<MainPage> {
             ),
             label: "Home",
           ),
+          // BottomNavigationBarItem(
+          //   icon: FaIcon(
+          //     FontAwesomeIcons.fingerprint,
+          //     size: 25,
+          //   ),
+          //   label: "Absensi",
+          // ),
+          // BottomNavigationBarItem(
+          //   icon: FaIcon(
+          //     FontAwesomeIcons.palfed,
+          //     size: 25,
+          //   ),
+          //   label: "Feed",
+          // ),
           BottomNavigationBarItem(
             icon: FaIcon(
-              FontAwesomeIcons.fingerprint,
+              FontAwesomeIcons.search,
               size: 25,
             ),
-            label: "Absensi",
-          ),
-          BottomNavigationBarItem(
-            icon: FaIcon(
-              FontAwesomeIcons.palfed,
-              size: 25,
-            ),
-            label: "Feed",
-          ),
-          BottomNavigationBarItem(
-            icon: FaIcon(
-              FontAwesomeIcons.solidBell,
-              size: 25,
-            ),
-            label: "Notification",
+            label: "Search",
           ),
           BottomNavigationBarItem(
             icon: FaIcon(
