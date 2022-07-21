@@ -114,8 +114,15 @@ class _LoginPageState extends State<LoginPage> {
 
           //Hallo, Please log in to your account
           Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              SizedBox(
+                height: 40,
+                child: Image.asset('assets/logo.png'),
+              ),
+              SizedBox(
+                height: 30,
+              ),
               Text(
                 'Hello,',
                 style: blackTextFont.copyWith(
@@ -187,7 +194,7 @@ class _LoginPageState extends State<LoginPage> {
                             isLoading = true;
                           });
 
-                          Get.to(()=>const MainPage());
+                          Get.to(() => const MainPage());
                           setState(() {
                             isLoading = false;
                           });
