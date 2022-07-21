@@ -13,6 +13,14 @@ class AbsenCard extends StatelessWidget {
       ),
       padding: const EdgeInsets.all(30),
       decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: Offset(0, 3), // changes position of shadow
+          ),
+        ],
         borderRadius: BorderRadius.circular(10),
         image: DecorationImage(
           fit: BoxFit.cover,
@@ -30,8 +38,19 @@ class AbsenCard extends StatelessWidget {
               fontSize: 15,
             ),
           ),
-          const SizedBox(
-            height: 56,
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            children: [
+              Text('07:00:00',
+                  style: whiteTextFontBigBold.copyWith(
+                    fontSize: 35,
+                  )),
+            ],
+          ),
+          SizedBox(
+            height: 5,
           ),
           Text(
             'Click to enter attendance',

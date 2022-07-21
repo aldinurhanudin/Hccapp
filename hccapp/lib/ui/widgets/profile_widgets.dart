@@ -9,45 +9,59 @@ class ProfileWidgets extends StatelessWidget {
       margin: const EdgeInsets.only(
         top: 40,
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Text(
+            'Cyber Blitz Nusantara',
+            style: greyTextFont.copyWith(
+              fontSize: 16,
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Cyber Blitz Nusantara',
-                style: greyTextFont.copyWith(
-                  fontSize: 16,
-                ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Aldi Nurhanudin',
+                    style: blackTextFontBold.copyWith(
+                      fontSize: 20,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    'Mobile Developer',
+                    style: greyTextFont.copyWith(
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
               ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                'Aldi Nurhanudin',
-                style: blackTextFontBold.copyWith(
-                  fontSize: 20,
-                ),
-              ),
-              SizedBox(
-                height: 8,
-              ),
-              Text(
-                'Mobile Developer',
-                style: greyTextFont.copyWith(
-                  fontSize: 16,
-                ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 22,
+                  ),
+                  Container(
+                    width: 60,
+                    height: 60,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      image:
+                          DecorationImage(image: AssetImage('assets/zayn.jpg')),
+                    ),
+                  ),
+                ],
               ),
             ],
-          ),
-          Container(
-            width: 60,
-            height: 60,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(image: AssetImage('assets/zayn.jpg')),
-            ),
           ),
         ],
       ),
