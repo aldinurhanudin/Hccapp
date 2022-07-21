@@ -23,29 +23,41 @@ class FiturItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         color: whiteColor,
         border: Border.all(
-          width: 2,
-          color: isSelected ? mainColor : whiteColor,
+          width: 0,
+          // color: isSelected ? mainColor : whiteColor,
         ),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Image.asset(
-            imageUrl,
-            height: 100,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Text(
-                title,
-                style: blackTextFont.copyWith(
-                  fontSize: 25,
+      child: GestureDetector(
+        onTap: () async {
+          // setState(() {
+          //   // isLoading = true;
+          // });
+
+          Get.to(() => LoginPage());
+          // setState(() {
+          //   // isLoading = false;
+          // });
+        },
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Image.asset(
+              imageUrl,
+              height: 100,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  title,
+                  style: blackTextFont.copyWith(
+                    fontSize: 25,
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ],
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
