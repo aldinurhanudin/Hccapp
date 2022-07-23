@@ -108,36 +108,31 @@ class _LoginPageState extends State<LoginPage> {
         children: [
           // Logo App
           Container(
-            height: 200,
+            height: 100,
             margin: const EdgeInsets.only(top: 50, bottom: 20),
           ),
 
           //Hallo, Please log in to your account
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: 40,
-                child: Image.asset('assets/logo.png'),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Text(
-                'Hello,',
-                style: blackTextFont.copyWith(
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.only(bottom: 20, top: 8),
-                child: Text(
-                  'Please log in to your account',
-                  style: blackTextFontBig,
-                ),
-              ),
-            ],
+          SizedBox(
+            height: 40,
+            child: Image.asset('assets/logo.png'),
+          ),
+          SizedBox(
+            height: 70,
+          ),
+          Text(
+            'Hello,',
+            style: blackTextFont.copyWith(
+              fontSize: 40,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(bottom: 20, top: 8),
+            child: Text(
+              'Please log in to your account',
+              style: blackTextFontBig,
+            ),
           ),
           // Form username & Password
           Column(
@@ -180,7 +175,12 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ],
           ),
-
+          const SizedBox(height: 8),
+          Text(
+            'Forgot Password',
+            style: blueTextFont,
+          ),
+          const SizedBox(height: 8),
           Row(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
