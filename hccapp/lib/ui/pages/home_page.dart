@@ -1,6 +1,6 @@
 part of 'pages.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends GetView<HomeController> {
   const HomePage({Key? key}) : super(key: key);
 
   @override
@@ -52,6 +52,10 @@ class HomePage extends StatelessWidget {
             imageUrl: 'assets/sppd.png',
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => controller.getPDF(),
+        child: Icon(Icons.note),
       ),
     );
   }

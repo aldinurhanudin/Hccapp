@@ -37,7 +37,7 @@ class FiturItem extends StatelessWidget {
           //   // isLoading = true;
           // });
 
-          Get.to(() => LoginPage());
+          Get.to(() => HomeView());
           // setState(() {
           //   // isLoading = false;
           // });

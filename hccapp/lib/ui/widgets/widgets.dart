@@ -4,6 +4,9 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+// import 'package:get/get_state_manager/src/simple/get_view.dart';
+import 'package:hccapp/app/modules/home/controllers/home_controller.dart';
+import 'package:hccapp/app/modules/home/views/home_view.dart';
 import 'package:hccapp/shared/shared.dart';
 import 'package:hccapp/ui/pages/pages.dart';
 
