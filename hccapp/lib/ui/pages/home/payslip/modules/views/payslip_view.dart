@@ -18,7 +18,7 @@ class PayslipView extends GetView<PayslipController> {
         itemCount: controller.products.length,
         itemBuilder: (context, index) => ListTile(
           leading: CircleAvatar(
-            child: Text("${controller.products[index]['id']}"),
+            child: Text("${controller.products[index]['bulan']}"),
           ),
           title: Text("${controller.products[index]['name']}"),
           subtitle: Text("${controller.products[index]['desc']}"),
