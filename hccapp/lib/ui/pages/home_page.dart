@@ -55,6 +55,10 @@ class HomePage extends GetView<HomeController> {
           ),
         ],
       ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () => controller.getPDF(),
+      //   child: Icon(Icons.note),
+      // ),
     );
   }
 }
