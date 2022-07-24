@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
-import 'package:hccapp/app/routes/app_pages.dart';
+import 'package:hccapp/ui/pages/home/payslip/routes/payslip_pages.dart';
+
 import 'package:responsive_framework/responsive_framework.dart';
 
 import 'cubit/cubit.dart';
@@ -27,8 +28,8 @@ class MyApp extends StatelessWidget {
       ],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: AppPages.INITIAL,
-        getPages: AppPages.routes,
+        initialRoute: PayslipPages.INITIAL,
+        getPages: PayslipPages.routes,
         theme: ThemeData(
           primaryColor: mainColor,
           primaryIconTheme: IconThemeData(color: mainColor), // default value

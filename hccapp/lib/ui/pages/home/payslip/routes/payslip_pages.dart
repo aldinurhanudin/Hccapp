@@ -1,12 +1,11 @@
 import 'package:get/get.dart';
-import 'package:hccapp/app/modules/home/bindings/home_binding.dart';
-import 'package:hccapp/app/modules/home/views/home_view.dart';
+import 'package:hccapp/ui/pages/home/payslip/modules/bindings/payslip_binding.dart';
 import 'package:hccapp/ui/pages/pages.dart';
 
-part 'app_routes.dart';
+part 'payslip_routes.dart';
 
-class AppPages {
-  AppPages._();
+class PayslipPages {
+  PayslipPages._();
 
   static const INITIAL = Routes.HOME;
 
@@ -14,7 +13,7 @@ class AppPages {
     GetPage(
       name: _Paths.HOME,
       page: () => SplashPage(),
-      binding: HomeBinding(),
+      binding: PayslipBinding(),
     ),
   ];
 }

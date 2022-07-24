@@ -8,12 +8,12 @@ import 'package:path_provider/path_provider.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 
-class HomeController extends GetxController {
+class PayslipController extends GetxController {
   var products = List.generate(
     20,
     (index) => {
-      "id": "${index + 1}",
-      "name": "Produk ke - ${index + 1}",
+      "bulan": "${index + 1}",
+      "name": "Gaji ke - ${index + 1}",
       "desc": DateTime.now().toString(),
     },
   );
@@ -27,7 +27,7 @@ class HomeController extends GetxController {
     var myFont = pw.Font.ttf(dataFont);
 
     // my images
-    var dataImage = await rootBundle.load("assets/image.jpg");
+    var dataImage = await rootBundle.load("assets/user_pic.png");
     var myImage = dataImage.buffer.asUint8List();
 
     // buat pages
@@ -54,7 +54,7 @@ class HomeController extends GetxController {
               alignment: pw.Alignment.center,
               width: double.infinity,
               child: pw.Text(
-                "MY PRODUCTS",
+                "Payslip",
                 style: pw.TextStyle(
                   fontSize: 50,
                   fontWeight: pw.FontWeight.bold,
@@ -68,7 +68,7 @@ class HomeController extends GetxController {
               children: products
                   .map(
                     (e) => pw.Text(
-                      "ID : ${e['id']} - ${e['name']}\n${e['desc']}\n\n",
+                      "Bulan : ${e['bulan']} - ${e['name']}\n${e['desc']}\n\n",
                       style: pw.TextStyle(
                         fontSize: 30,
                         font: myFont,
@@ -87,7 +87,7 @@ class HomeController extends GetxController {
 
     // buat file kosong di direktori
     final dir = await getApplicationDocumentsDirectory();
-    final file = File('${dir.path}/mydocument.pdf');
+    final file = File('${dir.path}/Payslip.pdf');
 
     // timpa file kosong dengan file pdf
     await file.writeAsBytes(bytes);
