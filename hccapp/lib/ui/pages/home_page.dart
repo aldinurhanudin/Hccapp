@@ -1,6 +1,6 @@
 part of 'pages.dart';
 
-class HomePage extends GetView<HomeController> {
+class HomePage extends GetView<PayslipController> {
   const HomePage({Key? key}) : super(key: key);
 
   @override

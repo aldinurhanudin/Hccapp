@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/home_controller.dart';
+import '../controllers/payslip_controller.dart';
 
-class HomeView extends GetView<HomeController> {
+
+
+class PayslipView extends GetView<PayslipController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('HomeView'),
+        title: Text('PayslipView'),
         centerTitle: true,
       ),
       body: ListView.builder(

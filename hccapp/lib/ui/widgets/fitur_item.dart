@@ -1,6 +1,6 @@
 part of 'widgets.dart';
 
-class FiturItem extends GetView<HomeController> {
+class FiturItem extends GetView<PayslipController> {
   final String title;
   final String imageUrl;
   final VoidCallback? onTap;
