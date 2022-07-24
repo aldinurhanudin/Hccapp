@@ -1,6 +1,6 @@
 part of 'pages.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends GetView<HomeController> {
   const HomePage({Key? key}) : super(key: key);
 
   @override
@@ -26,22 +26,24 @@ class HomePage extends StatelessWidget {
           const SizedBox(
             height: 14,
           ),
-          const FiturItem(
+          FiturItem(
             title: 'Project saya',
             imageUrl: 'assets/project.png',
-            isSelected: true,
+            onTap: () {},
           ),
-          const FiturItem(
+          FiturItem(
             title: 'Slip Gaji',
             imageUrl: 'assets/slipgaji.png',
+            onTap: () => controller.getPDF(),
           ),
           const FiturItem(
             title: 'Claim',
             imageUrl: 'assets/claim.png',
           ),
-          const FiturItem(
+          FiturItem(
             title: 'Cuti',
             imageUrl: 'assets/cuti.png',
+            onTap: () {},
           ),
           const FiturItem(
             title: 'Project saya',
