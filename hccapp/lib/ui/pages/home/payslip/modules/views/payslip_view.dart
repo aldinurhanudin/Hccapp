@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hccapp/shared/shared.dart';
+import 'package:hccapp/ui/pages/home/payslip/modules/controllers/payslip_controller.dart';
 import 'package:hccapp/ui/pages/pages.dart';
 import 'package:snippet_coder_utils/FormHelper.dart';
 
@@ -118,43 +119,54 @@ class _PayslipViewState extends State<PayslipView> {
               optionValue: "ID",
               optionLabel: "Name",
             ),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                    margin: const EdgeInsets.only(top: 10),
-                    child: ElevatedButton(
-                      // onPressed: () => controller.getPDF(),
-                      onPressed: () async {
-                        // setState(() {
-                        //   isLoading = true;
-                        // });
-
-                        Get.to(() => ProfilePage());
-                        // setState(() {
-                        //   isLoading = false;
-                        // });
-                      },
-                      style: ElevatedButton.styleFrom(
-                        primary: mainColor,
-                        elevation: 0,
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 70, vertical: 15),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                      ),
-                      child: Text(
-                        'Cari',
-                        style: whiteTextFontBig,
-                      ),
-                    )),
-              ],
-            ),
+            Cari(),
           ],
         ),
       ),
+    );
+  }
+}
+
+class Cari extends GetView<PayslipController> {
+  const Cari({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+            margin: const EdgeInsets.only(top: 10),
+            child: ElevatedButton(
+              onPressed: () => controller.getPDF(),
+              // onPressed: () async {
+              //   // setState(() {
+              //   //   isLoading = true;
+              //   // });
+
+              //   Get.to(() => ProfilePage());
+              //   // setState(() {
+              //   //   isLoading = false;
+              //   // });
+              // },
+              style: ElevatedButton.styleFrom(
+                primary: mainColor,
+                elevation: 0,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 70, vertical: 15),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+              child: Text(
+                'Cari',
+                style: whiteTextFontBig,
+              ),
+            )),
+      ],
     );
   }
 }
