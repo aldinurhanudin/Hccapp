@@ -34,7 +34,17 @@ class HomePage extends GetView<PayslipController> {
           FiturItem(
             title: 'Slip Gaji',
             imageUrl: 'assets/slipgaji.png',
-            onTap: () => controller.getPDF(),
+            // onTap: () => controller.getPDF(),
+            onTap: () async {
+              // setState(() {
+              //   // isLoading = true;
+              // });
+
+              Get.to(() => PayslipView());
+              // setState(() {
+              //   // isLoading = false;
+              // });
+            },
           ),
           const FiturItem(
             title: 'Claim',
