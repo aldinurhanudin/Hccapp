@@ -14,3 +14,5 @@ import 'package:hccapp/ui/pages/pages.dart';
 part 'absen_card.dart';
 part 'fitur_item.dart';
 part 'profile_widgets.dart';
+part 'custom_tabbar.dart';
+part 'sedang_proses.dart';

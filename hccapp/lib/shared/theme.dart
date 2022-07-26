@@ -62,6 +62,8 @@ TextStyle greyTextFontBold = GoogleFonts.roboto()
     .copyWith(color: accentColor1, fontWeight: FontWeight.bold, fontSize: 12);
 
 // Text Title
+TextStyle blackFontStyle3 = GoogleFonts.poppins().copyWith(
+  color: Colors.black);
 TextStyle whiteTextFontTitleBold = GoogleFonts.roboto()
     .copyWith(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15);
 TextStyle blackTextFontTitleBold = GoogleFonts.roboto()
