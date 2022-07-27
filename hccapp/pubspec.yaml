@@ -22,6 +22,7 @@ dependencies:
   pdf: ^3.8.1
   responsive_framework: ^0.2.0
   syncfusion_flutter_pdfviewer: ^20.2.40-beta
+   pdfdownload: ^0.0.2
 
 dev_dependencies:
   flutter_lints: ^2.0.0

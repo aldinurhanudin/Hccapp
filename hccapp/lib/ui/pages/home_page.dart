@@ -40,7 +40,7 @@ class HomePage extends GetView<PayslipController> {
               //   // isLoading = true;
               // });
 
-              Get.to(() => PayslipView());
+              Get.to(() => Payslip());
               // setState(() {
               //   // isLoading = false;
               // });
