@@ -4,8 +4,8 @@ const double defaultMargin = 20;
 
 const Color mainColor = Color(0xFF3C4697);
 const Color whiteColor = Color(0xFFFFFFFF);
-const Color blackColor = Color.fromARGB(255, 20, 19, 19);
 
+const Color blackColor = Color.fromARGB(255, 20, 19, 19);
 const lightBackgroundColor = Color(0xffF6F8FB);
 const Color accentColor1 = Color(0xFFADADAD);
 const Color accentColor2 = Color(0xFFFBD460);
@@ -64,6 +64,7 @@ TextStyle greyTextFontBold = GoogleFonts.roboto()
     .copyWith(color: accentColor1, fontWeight: FontWeight.bold, fontSize: 12);
 
 // Text Title
+TextStyle blackFontStyle3 = GoogleFonts.poppins().copyWith(color: Colors.black);
 TextStyle whiteTextFontTitleBold = GoogleFonts.roboto()
     .copyWith(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15);
 TextStyle blackTextFontTitleBold = GoogleFonts.roboto()
