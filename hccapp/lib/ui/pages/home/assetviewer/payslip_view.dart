@@ -1,7 +1,15 @@
+import 'dart:io';
+
+import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:hccapp/shared/shared.dart';
+import 'package:hccapp/ui/pages/home/assetviewer/payslip.dart';
+import 'package:open_file/open_file.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:snippet_coder_utils/FormHelper.dart';
 
 class PayslipView extends StatefulWidget {
   const PayslipView({Key? key}) : super(key: key);
@@ -50,7 +58,7 @@ class _PayslipViewState extends State<PayslipView> {
           elevation: 0,
           centerTitle: true,
           iconTheme: IconThemeData(
-            color: whiteColor,
+            color: blackColor,
           ),
           title: Text('Slip Gaji',
               style: blackTextFontBold.copyWith(
@@ -59,58 +67,58 @@ class _PayslipViewState extends State<PayslipView> {
         ),
         body: Column(
           children: [
-            // FormHelper.dropDownWidgetWithLabel(
-            //   context,
-            //   "Tahun",
-            //   "Pilih Tahun",
-            //   this.countryId,
-            //   this.countries,
-            //   (onChangedVal) {
-            //     this.countryId = onChangedVal;
-            //     print("Selected Country : $onChangedVal");
+            FormHelper.dropDownWidgetWithLabel(
+              context,
+              "Tahun",
+              "Pilih Tahun",
+              this.countryId,
+              this.countries,
+              (onChangedVal) {
+                this.countryId = onChangedVal;
+                print("Selected Country : $onChangedVal");
 
-            //     this.states = this
-            //         .statesMasters
-            //         .where(
-            //           (stateItem) =>
-            //               stateItem["ParentId"].toString() ==
-            //               onChangedVal.toString(),
-            //         )
-            //         .toList();
-            //     this.stateId = null;
-            //   },
-            //   (onValidateVal) {
-            //     if (onValidateVal == null) {
-            //       return 'Please Select Country';
-            //     }
+                this.states = this
+                    .statesMasters
+                    .where(
+                      (stateItem) =>
+                          stateItem["ParentId"].toString() ==
+                          onChangedVal.toString(),
+                    )
+                    .toList();
+                this.stateId = null;
+              },
+              (onValidateVal) {
+                if (onValidateVal == null) {
+                  return 'Please Select Country';
+                }
 
-            //     return null;
-            //   },
-            //   borderColor: Theme.of(context).primaryColor,
-            //   borderFocusColor: Theme.of(context).primaryColor,
-            //   borderRadius: 10,
-            //   // optionValue: "val",
-            //   // optionLabel: "name",
-            // ),
-            // FormHelper.dropDownWidgetWithLabel(
-            //   context,
-            //   "Bulan",
-            //   "Pilih Bulan",
-            //   this.stateId,
-            //   this.states,
-            //   (onChangedVal) {
-            //     this.stateId = onChangedVal;
-            //     print("Selected State: $onChangedVal");
-            //   },
-            //   (onValidate) {
-            //     return null;
-            //   },
-            //   borderColor: Theme.of(context).primaryColor,
-            //   borderFocusColor: Theme.of(context).primaryColor,
-            //   borderRadius: 10,
-            //   optionValue: "ID",
-            //   optionLabel: "Name",
-            // ),
+                return null;
+              },
+              borderColor: Theme.of(context).primaryColor,
+              borderFocusColor: Theme.of(context).primaryColor,
+              borderRadius: 10,
+              // optionValue: "val",
+              // optionLabel: "name",
+            ),
+            FormHelper.dropDownWidgetWithLabel(
+              context,
+              "Bulan",
+              "Pilih Bulan",
+              this.stateId,
+              this.states,
+              (onChangedVal) {
+                this.stateId = onChangedVal;
+                print("Selected State: $onChangedVal");
+              },
+              (onValidate) {
+                return null;
+              },
+              borderColor: Theme.of(context).primaryColor,
+              borderFocusColor: Theme.of(context).primaryColor,
+              borderRadius: 10,
+              optionValue: "ID",
+              optionLabel: "Name",
+            ),
             Cari(),
           ],
         ),
@@ -133,17 +141,17 @@ class Cari extends StatelessWidget {
         Container(
             margin: const EdgeInsets.only(top: 10),
             child: ElevatedButton(
-              // onPressed: () => controller.getPDF(),
-              onPressed: () async {
-                // setState(() {
-                //   isLoading = true;
-                // });
+              onPressed: () => openFile(
+                url:
+                    'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+                fileName: 'payslip.pdf',
+              ),
 
-                // Get.to(() => Payslip());
-                // setState(() {
-                //   isLoading = false;
-                // });
-              },
+              // onPressed: () async {
+
+              //   Get.to(() => Payslip());
+
+              // },
               style: ElevatedButton.styleFrom(
                 primary: mainColor,
                 elevation: 0,
@@ -160,5 +168,37 @@ class Cari extends StatelessWidget {
             )),
       ],
     );
+  }
+}
+
+Future openFile({required String url, String? fileName}) async {
+  final file = await downloadFile(url, fileName!);
+  if (file == null) return;
+
+  print('Path: ${file.path}');
+
+  OpenFile.open(file.path);
+}
+
+Future downloadFile(String url, String name) async {
+  final appStorage = await getApplicationDocumentsDirectory();
+  final file = File('${appStorage.path}/$name');
+  try {
+    final response = await Dio().get(
+      url,
+      options: Options(
+        responseType: ResponseType.bytes,
+        followRedirects: false,
+        receiveTimeout: 0,
+      ),
+    );
+
+    final raf = file.openSync(mode: FileMode.write);
+    raf.writeFromSync(response.data);
+    await raf.close();
+
+    return file;
+  } catch (e) {
+    return null;
   }
 }

@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
               // });
 
               // Get.to(() => Payslip());
-              Get.to(() => PayslipDownload());
+              Get.to(() => PayslipView());
               // setState(() {
               //   // isLoading = false;
               // });
