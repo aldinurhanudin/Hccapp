@@ -26,7 +26,7 @@ class _PayslipState extends State<Payslip> {
           actions: <Widget>[
             IconButton(
               icon: Icon(
-                Icons.zoom_in,
+                Icons.save,
                 color: Colors.white,
               ),
               onPressed: () {
@@ -42,12 +42,8 @@ class _PayslipState extends State<Payslip> {
         //   ),
         // )
         body: Container(
-            child: SfPdfViewer.network(
-                'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf'),
-                )
-                
-                );
-                
-                
+          child: SfPdfViewer.network(
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf'),
+        ));
   }
 }

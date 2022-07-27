@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:hccapp/shared/shared.dart';
-import 'package:hccapp/ui/pages/home/payslip/modules/controllers/payslip_controller.dart';
 
 class PayslipView extends StatefulWidget {
   const PayslipView({Key? key}) : super(key: key);
@@ -120,7 +119,7 @@ class _PayslipViewState extends State<PayslipView> {
   }
 }
 
-class Cari extends GetView<PayslipController> {
+class Cari extends StatelessWidget {
   const Cari({
     Key? key,
   }) : super(key: key);
@@ -134,17 +133,17 @@ class Cari extends GetView<PayslipController> {
         Container(
             margin: const EdgeInsets.only(top: 10),
             child: ElevatedButton(
-              onPressed: () => controller.getPDF(),
-              // onPressed: () async {
-              //   // setState(() {
-              //   //   isLoading = true;
-              //   // });
+              // onPressed: () => controller.getPDF(),
+              onPressed: () async {
+                // setState(() {
+                //   isLoading = true;
+                // });
 
-              //   Get.to(() => ProfilePage());
-              //   // setState(() {
-              //   //   isLoading = false;
-              //   // });
-              // },
+                // Get.to(() => Payslip());
+                // setState(() {
+                //   isLoading = false;
+                // });
+              },
               style: ElevatedButton.styleFrom(
                 primary: mainColor,
                 elevation: 0,

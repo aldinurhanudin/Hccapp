@@ -1,6 +1,6 @@
 part of 'pages.dart';
 
-class HomePage extends GetView<PayslipController> {
+class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
