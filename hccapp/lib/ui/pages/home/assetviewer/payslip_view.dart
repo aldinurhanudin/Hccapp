@@ -43,6 +43,7 @@ class _PayslipViewState extends State<PayslipView> {
 
   @override
   Widget build(BuildContext context) {
+    var FormHelper;
     return SafeArea(
       child: Scaffold(
         backgroundColor: lightBackgroundColor,
@@ -60,58 +61,58 @@ class _PayslipViewState extends State<PayslipView> {
         ),
         body: Column(
           children: [
-            // FormHelper.dropDownWidgetWithLabel(
-            //   context,
-            //   "Tahun",
-            //   "Pilih Tahun",
-            //   this.countryId,
-            //   this.countries,
-            //   (onChangedVal) {
-            //     this.countryId = onChangedVal;
-            //     print("Selected Country : $onChangedVal");
+            FormHelper.dropDownWidgetWithLabel(
+              context,
+              "Tahun",
+              "Pilih Tahun",
+              this.countryId,
+              this.countries,
+              (onChangedVal) {
+                this.countryId = onChangedVal;
+                print("Selected Country : $onChangedVal");
 
-            //     this.states = this
-            //         .statesMasters
-            //         .where(
-            //           (stateItem) =>
-            //               stateItem["ParentId"].toString() ==
-            //               onChangedVal.toString(),
-            //         )
-            //         .toList();
-            //     this.stateId = null;
-            //   },
-            //   (onValidateVal) {
-            //     if (onValidateVal == null) {
-            //       return 'Please Select Country';
-            //     }
+                this.states = this
+                    .statesMasters
+                    .where(
+                      (stateItem) =>
+                          stateItem["ParentId"].toString() ==
+                          onChangedVal.toString(),
+                    )
+                    .toList();
+                this.stateId = null;
+              },
+              (onValidateVal) {
+                if (onValidateVal == null) {
+                  return 'Please Select Country';
+                }
 
-            //     return null;
-            //   },
-            //   borderColor: Theme.of(context).primaryColor,
-            //   borderFocusColor: Theme.of(context).primaryColor,
-            //   borderRadius: 10,
-            //   // optionValue: "val",
-            //   // optionLabel: "name",
-            // ),
-            // FormHelper.dropDownWidgetWithLabel(
-            //   context,
-            //   "Bulan",
-            //   "Pilih Bulan",
-            //   this.stateId,
-            //   this.states,
-            //   (onChangedVal) {
-            //     this.stateId = onChangedVal;
-            //     print("Selected State: $onChangedVal");
-            //   },
-            //   (onValidate) {
-            //     return null;
-            //   },
-            //   borderColor: Theme.of(context).primaryColor,
-            //   borderFocusColor: Theme.of(context).primaryColor,
-            //   borderRadius: 10,
-            //   optionValue: "ID",
-            //   optionLabel: "Name",
-            // ),
+                return null;
+              },
+              borderColor: Theme.of(context).primaryColor,
+              borderFocusColor: Theme.of(context).primaryColor,
+              borderRadius: 10,
+              // optionValue: "val",
+              // optionLabel: "name",
+            ),
+            FormHelper.dropDownWidgetWithLabel(
+              context,
+              "Bulan",
+              "Pilih Bulan",
+              this.stateId,
+              this.states,
+              (onChangedVal) {
+                this.stateId = onChangedVal;
+                print("Selected State: $onChangedVal");
+              },
+              (onValidate) {
+                return null;
+              },
+              borderColor: Theme.of(context).primaryColor,
+              borderFocusColor: Theme.of(context).primaryColor,
+              borderRadius: 10,
+              optionValue: "ID",
+              optionLabel: "Name",
+            ),
             Cari(),
           ],
         ),

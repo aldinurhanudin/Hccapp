@@ -8,10 +8,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hccapp/ui/pages/home/assetviewer/payslip.dart';
 import 'package:hccapp/ui/pages/home/payslip/modules/controllers/payslip_controller.dart';
 
+
 import 'package:hccapp/ui/widgets/widgets.dart';
 
 import '../../cubit/cubit.dart';
 import '../../shared/shared.dart';
+import 'home/assetviewer/payslip_view.dart';
 
 part 'wrapper.dart';
 
