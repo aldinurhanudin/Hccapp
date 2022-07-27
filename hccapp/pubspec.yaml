@@ -13,6 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.0.1
+  # flutter_plugin_pdf_viewer: ^1.0.7
   font_awesome_flutter: ^10.1.0
   get: ^4.6.5
   google_fonts: ^3.0.1
