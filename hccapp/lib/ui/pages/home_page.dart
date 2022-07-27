@@ -43,7 +43,17 @@ class HomePage extends GetView<PayslipController> {
           FiturItem(
             title: 'Cuti',
             imageUrl: 'assets/cuti.png',
-            onTap: () {},
+            // onTap: () {},
+            onTap: () async {
+              // setState(() {
+              //   // isLoading = true;
+              // });
+
+              Get.to(() => Payslip());
+              // setState(() {
+              //   // isLoading = false;
+              // });
+            },
           ),
           const FiturItem(
             title: 'Project saya',
