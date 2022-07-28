@@ -6,6 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hccapp/ui/pages/home/claim/claim.dart';
+import 'package:hccapp/ui/pages/home/payslip/paylip_view1.dart';
 import 'package:hccapp/ui/pages/home/payslip/payslip_view.dart';
 
 

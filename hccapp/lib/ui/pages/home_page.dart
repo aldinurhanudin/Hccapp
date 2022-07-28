@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
             title: 'Slip Gaji',
             imageUrl: 'assets/slipgaji.png',
             onTap: () async {
-              Get.to(() => PayslipView());
+              Get.to(() => PayslipView1());
             },
           ),
           FiturItem(

@@ -111,7 +111,7 @@ class _PayslipViewState extends State<PayslipView> {
                 print("Selected State: $onChangedVal");
               },
               (onValidate) {
-                return null;
+                // return null;
               },
               borderColor: Theme.of(context).primaryColor,
               borderFocusColor: Theme.of(context).primaryColor,
