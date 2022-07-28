@@ -9,7 +9,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hccapp/ui/pages/home/assetviewer/payslip.dart';
 import 'package:hccapp/ui/pages/home/assetviewer/payslip_view.dart';
 import 'package:hccapp/ui/pages/home/claim/claim.dart';
-// import 'package:hccapp/ui/pages/home/assetviewer/payslip_download.dart';
+
+import 'package:hccapp/ui/pages/home/payslip/payslip_view.dart';
+
 
 
 import 'package:hccapp/ui/widgets/widgets.dart';

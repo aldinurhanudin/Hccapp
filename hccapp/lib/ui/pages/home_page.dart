@@ -34,17 +34,8 @@ class HomePage extends StatelessWidget {
           FiturItem(
             title: 'Slip Gaji',
             imageUrl: 'assets/slipgaji.png',
-            // onTap: () => controller.getPDF(),
             onTap: () async {
-              // setState(() {
-              //   // isLoading = true;
-              // });
-
-              // Get.to(() => Payslip());
-              Get.to(() => PayslipView());
-              // setState(() {
-              //   // isLoading = false;
-              // });
+              // Get.to(() => PayslipView());
             },
           ),
           FiturItem(
@@ -57,16 +48,16 @@ class HomePage extends StatelessWidget {
           FiturItem(
             title: 'Cuti',
             imageUrl: 'assets/cuti.png',
-            onTap: () async {
-              // setState(() {
-              //   // isLoading = true;
-              // });
+            // onTap: () async {
+            //   // setState(() {
+            //   //   // isLoading = true;
+            //   // });
 
-              Get.to(() => PayslipView());
-              // setState(() {
-              //   // isLoading = false;
-              // });
-            },
+            //   Get.to(() => PayslipView());
+            //   // setState(() {
+            //   //   // isLoading = false;
+            //   // });
+            // },
           ),
           const FiturItem(
             title: 'Project saya',
