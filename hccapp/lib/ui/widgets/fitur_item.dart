@@ -1,6 +1,6 @@
 part of 'widgets.dart';
 
-class FiturItem extends GetView<PayslipController> {
+class FiturItem extends StatelessWidget{
   final String title;
   final String imageUrl;
   final VoidCallback? onTap;

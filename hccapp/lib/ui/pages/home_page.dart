@@ -1,6 +1,6 @@
 part of 'pages.dart';
 
-class HomePage extends GetView<PayslipController> {
+class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
@@ -34,7 +34,9 @@ class HomePage extends GetView<PayslipController> {
           FiturItem(
             title: 'Slip Gaji',
             imageUrl: 'assets/slipgaji.png',
-            onTap: () => controller.getPDF(),
+            onTap: () async {
+              Get.to(() => PayslipView());
+            },
           ),
           FiturItem(
             title: 'Claim',

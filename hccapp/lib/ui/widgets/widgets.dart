@@ -9,7 +9,7 @@ import 'package:get/get_state_manager/src/simple/get_view.dart';
 
 import 'package:hccapp/shared/shared.dart';
 import 'package:hccapp/ui/pages/home/claim/claim.dart';
-import 'package:hccapp/ui/pages/home/payslip/modules/controllers/payslip_controller.dart';
+
 import 'package:hccapp/ui/pages/pages.dart';
 
 part 'absen_card.dart';
