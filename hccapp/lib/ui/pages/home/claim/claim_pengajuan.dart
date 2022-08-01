@@ -192,7 +192,9 @@ class ClaimPengajuanState extends State<ClaimPengajuan> {
                   height: 45,
                   padding: EdgeInsets.symmetric(horizontal: defaultMargin),
                   child: RaisedButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      Get.to(() => UploadBukti());
+                    },
                     elevation: 0,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),

@@ -21,6 +21,7 @@ dependencies:
   get: ^4.6.5
   google_fonts: ^3.0.1
   image_picker: ^0.8.5+3
+  modal_progress_hud_nsn: ^0.2.1-nullsafety-1
   open_file: ^3.2.1
   path_provider: ^2.0.11
   pdf: ^3.8.1
