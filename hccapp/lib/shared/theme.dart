@@ -2,7 +2,7 @@ part of 'shared.dart';
 
 const double defaultMargin = 20;
 
-const Color mainColor = Color(0xFF3C4697);
+const Color mainColor = Color(0xFF1F61AD);
 const Color whiteColor = Color(0xFFFFFFFF);
 const Color blackColor = Color.fromARGB(255, 6, 6, 6);
 const lightBackgroundColor = Color(0xffF6F8FB);
