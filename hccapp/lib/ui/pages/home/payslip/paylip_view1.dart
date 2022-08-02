@@ -60,7 +60,7 @@ class PayslipView1State extends State<PayslipView1> {
         iconTheme: IconThemeData(
           color: blackColor,
         ),
-        title: Text('Claim',
+        title: Text('Gaji',
             style: blackTextFontBold.copyWith(
               fontSize: 20,
             )),

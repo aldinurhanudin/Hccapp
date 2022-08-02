@@ -88,8 +88,8 @@ class ClaimPengajuanState extends State<ClaimPengajuan> {
   @override
   Widget build(BuildContext context) {
     TextEditingController phoneController = TextEditingController();
-    TextEditingController addressController = TextEditingController();
-    TextEditingController houseController = TextEditingController();
+    TextEditingController nominalController = TextEditingController();
+    TextEditingController keteranganController = TextEditingController();
 
     return Scaffold(
       appBar: AppBar(
@@ -110,35 +110,79 @@ class ClaimPengajuanState extends State<ClaimPengajuan> {
             Column(
               children: [
                 Container(
-                  width: double.infinity,
-                  margin:
-                      EdgeInsets.fromLTRB(defaultMargin, 16, defaultMargin, 6),
-                  child: Text("Tipe Claim", style: blackTextFont),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        width: 57,
+                        margin: EdgeInsets.fromLTRB(2, 20, 27, 14),
+                        child: Text(
+                          "Tipe Claim",
+                          style: blackTextFont,
+                        ),
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                              height: 50,
+                              width: 200,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  border: Border.all(color: Colors.black)),
+                              child: DropdownButton(
+                                isExpanded: true,
+                                underline: SizedBox(),
+                                value: nTipe,
+                                onChanged: (String? value) {
+                                  pilihTipe(value ??
+                                      ""); //perubahaan saat kota di pilih
+                                  nilaiTipe = listTipe.indexOf(value ??
+                                      ""); //mengambil nilai index berdasarkan urutan list
+                                },
+                                items: listTipe.map((String value) {
+                                  return DropdownMenuItem(
+                                    //tampilan isi data dropdown
+                                    child: Text(value),
+                                    value: value,
+                                  );
+                                }).toList(),
+                              )),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-                Container(
-                    width: double.infinity,
-                    margin: EdgeInsets.symmetric(horizontal: defaultMargin),
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: Colors.black)),
-                    child: DropdownButton(
-                      isExpanded: true,
-                      underline: SizedBox(),
-                      value: nTipe,
-                      onChanged: (String? value) {
-                        pilihTipe(value ?? ""); //perubahaan saat kota di pilih
-                        nilaiTipe = listTipe.indexOf(value ??
-                            ""); //mengambil nilai index berdasarkan urutan list
-                      },
-                      items: listTipe.map((String value) {
-                        return DropdownMenuItem(
-                          //tampilan isi data dropdown
-                          child: Text(value),
-                          value: value,
-                        );
-                      }).toList(),
-                    )),
+                // Container(
+                //   width: double.infinity,
+                //   margin:
+                //       EdgeInsets.fromLTRB(defaultMargin, 16, defaultMargin, 6),
+                //   child: Text("Tipe Claim", style: blackTextFont),
+                // ),
+                // Container(
+                //     width: double.infinity,
+                //     margin: EdgeInsets.symmetric(horizontal: defaultMargin),
+                //     padding: EdgeInsets.symmetric(horizontal: 10),
+                //     decoration: BoxDecoration(
+                //         borderRadius: BorderRadius.circular(8),
+                //         border: Border.all(color: Colors.black)),
+                //     child: DropdownButton(
+                //       isExpanded: true,
+                //       underline: SizedBox(),
+                //       value: nTipe,
+                //       onChanged: (String? value) {
+                //         pilihTipe(value ?? ""); //perubahaan saat kota di pilih
+                //         nilaiTipe = listTipe.indexOf(value ??
+                //             ""); //mengambil nilai index berdasarkan urutan list
+                //       },
+                //       items: listTipe.map((String value) {
+                //         return DropdownMenuItem(
+                //           //tampilan isi data dropdown
+                //           child: Text(value),
+                //           value: value,
+                //         );
+                //       }).toList(),
+                //     )
+                // ),
                 SizedBox(
                   height: 30,
                 ),
@@ -199,7 +243,7 @@ class ClaimPengajuanState extends State<ClaimPengajuan> {
                       borderRadius: BorderRadius.circular(8),
                       border: Border.all(color: Colors.black)),
                   child: TextField(
-                    controller: addressController,
+                    controller: keteranganController,
                     decoration: InputDecoration(
                         border: InputBorder.none,
                         hintStyle: TextStyle(color: Colors.grey),
@@ -228,7 +272,7 @@ class ClaimPengajuanState extends State<ClaimPengajuan> {
                                 borderRadius: BorderRadius.circular(8),
                                 border: Border.all(color: Colors.black)),
                             child: TextField(
-                              controller: addressController,
+                              controller: nominalController,
                               decoration: InputDecoration(
                                   border: InputBorder.none,
                                   hintStyle: TextStyle(color: Colors.grey),

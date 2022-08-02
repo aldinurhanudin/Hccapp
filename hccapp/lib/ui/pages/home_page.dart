@@ -17,14 +17,14 @@ class HomePage extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Text(
-            'Select Fitur',
-            style: blackTextFontBold.copyWith(
-              fontSize: 16,
-            ),
-          ),
+          // Text(
+          //   'Select Fitur',
+          //   style: blackTextFontBold.copyWith(
+          //     fontSize: 16,
+          //   ),
+          // ),
           const SizedBox(
-            height: 14,
+            height: 20,
           ),
           FiturItem(
             title: 'Project saya',
