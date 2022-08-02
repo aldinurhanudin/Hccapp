@@ -152,37 +152,36 @@ class ClaimPengajuanState extends State<ClaimPengajuan> {
                     ],
                   ),
                 ),
-                // Container(
-                //   width: double.infinity,
-                //   margin:
-                //       EdgeInsets.fromLTRB(defaultMargin, 16, defaultMargin, 6),
-                //   child: Text("Tipe Claim", style: blackTextFont),
-                // ),
-                // Container(
-                //     width: double.infinity,
-                //     margin: EdgeInsets.symmetric(horizontal: defaultMargin),
-                //     padding: EdgeInsets.symmetric(horizontal: 10),
-                //     decoration: BoxDecoration(
-                //         borderRadius: BorderRadius.circular(8),
-                //         border: Border.all(color: Colors.black)),
-                //     child: DropdownButton(
-                //       isExpanded: true,
-                //       underline: SizedBox(),
-                //       value: nTipe,
-                //       onChanged: (String? value) {
-                //         pilihTipe(value ?? ""); //perubahaan saat kota di pilih
-                //         nilaiTipe = listTipe.indexOf(value ??
-                //             ""); //mengambil nilai index berdasarkan urutan list
-                //       },
-                //       items: listTipe.map((String value) {
-                //         return DropdownMenuItem(
-                //           //tampilan isi data dropdown
-                //           child: Text(value),
-                //           value: value,
-                //         );
-                //       }).toList(),
-                //     )
-                // ),
+                Container(
+                  width: double.infinity,
+                  margin:
+                      EdgeInsets.fromLTRB(defaultMargin, 16, defaultMargin, 6),
+                  child: Text("Tipe Claim", style: blackTextFont),
+                ),
+                Container(
+                    width: double.infinity,
+                    margin: EdgeInsets.symmetric(horizontal: defaultMargin),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: Colors.black)),
+                    child: DropdownButton(
+                      isExpanded: true,
+                      underline: SizedBox(),
+                      value: nTipe,
+                      onChanged: (String? value) {
+                        pilihTipe(value ?? ""); //perubahaan saat kota di pilih
+                        nilaiTipe = listTipe.indexOf(value ??
+                            ""); //mengambil nilai index berdasarkan urutan list
+                      },
+                      items: listTipe.map((String value) {
+                        return DropdownMenuItem(
+                          //tampilan isi data dropdown
+                          child: Text(value),
+                          value: value,
+                        );
+                      }).toList(),
+                    )),
                 SizedBox(
                   height: 30,
                 ),

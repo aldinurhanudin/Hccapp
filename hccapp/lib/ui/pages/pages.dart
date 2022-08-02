@@ -9,7 +9,6 @@ import 'package:hccapp/ui/pages/home/claim/claim.dart';
 import 'package:hccapp/ui/pages/home/payslip/paylip_view1.dart';
 import 'package:hccapp/ui/pages/home/payslip/payslip_view.dart';
 
-
 import 'package:hccapp/ui/widgets/widgets.dart';
 
 import '../../cubit/cubit.dart';
@@ -24,3 +23,4 @@ part 'profile_page.dart';
 part 'home_page.dart';
 part 'splash_page.dart';
 part 'edit_profile_page.dart';
+// part 'preference_page.dart';
